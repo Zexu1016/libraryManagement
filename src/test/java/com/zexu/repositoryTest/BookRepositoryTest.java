@@ -1,6 +1,6 @@
 package com.zexu.repositoryTest;
 
-import com.zexu.entity.Book;
+import com.zexu.repository.entity.Book;
 import com.zexu.repository.BookRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

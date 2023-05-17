@@ -1,6 +1,6 @@
 package com.zexu.service.impl;
 
-import com.zexu.entity.Book;
+import com.zexu.repository.entity.Book;
 import com.zexu.repository.BookRepository;
 import com.zexu.service.BookService;
 import lombok.RequiredArgsConstructor;

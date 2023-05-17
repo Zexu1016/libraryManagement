@@ -1,6 +1,6 @@
 package com.zexu.repository;
 
-import com.zexu.entity.Book;
+import com.zexu.repository.entity.Book;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

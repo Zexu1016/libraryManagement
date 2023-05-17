@@ -1,6 +1,6 @@
 package com.zexu.service;
 
-import com.zexu.entity.Book;
+import com.zexu.repository.entity.Book;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.zexu.entity;
+package com.zexu.repository.entity;
 
 import lombok.Data;
 
