@@ -8,4 +8,6 @@ public class Book {
     private String name;
     private String type;
     private String description;
+    private String location;
+    private String status;
 }

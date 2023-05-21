@@ -30,6 +30,22 @@ public class BookController {
         return LMResult.success(true);
     }
 
+    @GetMapping("/borrow/{id}")
+    public LMResult<Boolean> borrow(@PathVariable Integer id) {
+        Book book = bookService.selectById(id);
+        book.setStatus("借出");
+        bookService.update(book);
+        return LMResult.success(true);
+    }
+
+    @GetMapping("/returned/{id}")
+    public LMResult<Boolean> returned(@PathVariable Integer id) {
+        Book book = bookService.selectById(id);
+        book.setStatus("在架");
+        bookService.update(book);
+        return LMResult.success(true);
+    }
+
     @PostMapping("/save")
     public LMResult<Boolean> save(@RequestBody Book book) {
         bookService.save(book);

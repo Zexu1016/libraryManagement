@@ -16,6 +16,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Boolean save(Book book) {
+        book.setStatus("在架");
         bookRepository.insert(book);
         return true;
     }
