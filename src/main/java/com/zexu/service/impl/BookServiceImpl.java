@@ -1,5 +1,6 @@
 package com.zexu.service.impl;
 
+import com.zexu.controller.request.PaginationDTO;
 import com.zexu.repository.entity.Book;
 import com.zexu.repository.BookRepository;
 import com.zexu.service.BookService;
@@ -41,5 +42,12 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<Book> selectAll() {
         return bookRepository.selectAll();
+    }
+
+    @Override
+    public List<Book> selectPage(PaginationDTO paginationDTO) {
+        Integer currentPage = paginationDTO.getCurrentPage();
+        Integer pageSize = paginationDTO.getPageSize();
+        return bookRepository.selectPage((currentPage - 1) * pageSize, currentPage * pageSize);
     }
 }

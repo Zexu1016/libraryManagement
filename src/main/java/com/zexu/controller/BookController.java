@@ -1,5 +1,6 @@
 package com.zexu.controller;
 
+import com.zexu.controller.request.PaginationDTO;
 import com.zexu.controller.response.LMResult;
 import com.zexu.repository.entity.Book;
 import com.zexu.service.BookService;
@@ -57,5 +58,13 @@ public class BookController {
         bookService.update(book);
         return LMResult.success(true);
     }
+
+    @PostMapping("/getPage")
+    public LMResult<List<Book>> getPage(@RequestBody PaginationDTO paginationDTO) {
+
+        return LMResult.success(bookService.selectPage(paginationDTO));
+    }
+
+
 
 }

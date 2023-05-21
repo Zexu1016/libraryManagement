@@ -1,5 +1,6 @@
 package com.zexu.service;
 
+import com.zexu.controller.request.PaginationDTO;
 import com.zexu.repository.entity.Book;
 
 import java.util.List;
@@ -12,4 +13,6 @@ public interface BookService {
     Book selectById(Integer id);
 
     List<Book> selectAll();
+
+    List<Book> selectPage(PaginationDTO paginationDTO);
 }
